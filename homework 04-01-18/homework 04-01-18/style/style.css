@@ -1,0 +1,17 @@
+
+body {
+  text-align: right;  
+}
+.mainCont {
+    border: 1px solid black;
+    direction: rtl;
+    display: inline-block;
+    line-height: 50px;
+    padding: 12px;
+}
+.historyCont {
+    direction: rtl;
+}
+.historyCont .historyList {
+    display: inline-block;
+}
