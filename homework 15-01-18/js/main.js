@@ -16,6 +16,7 @@ doc.ready(function() {
     let submitBtn = document.querySelector('.btnSubmit');
     let cont = "";
     let infoList = document.querySelector('.infoList');
+    
     submitBtn.addEventListener('click', getInfo);
 
 
@@ -38,29 +39,8 @@ doc.ready(function() {
                         </ul>
                      
         `;
-
-
         return cont;
-
-
-
     }
-    // submitBtn.addEventListener('click', function() {
-    //     let inputValue = input.value;
-    //     // if(inputValue >=1 && inputValue < 250) {
-    //     //     fetchCountry(inputValue);
-    //     // }
-    //     // else {
-    //     //     console.log("not valid number");
-    //     // }
-    //     try {
-    //         fetchCountry(inputValue);
-    //     }
-    //     catch(e) {
-    //         console.log("error", e);
-    //     }
-    //
-    // });
 
 
     async function getInfo() {
