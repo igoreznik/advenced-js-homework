@@ -11,14 +11,19 @@ var doc = {
     }
 };
 doc.ready(function() {
+    //-------------------------Declaration of variables----------------------------//
+
     let container = document.querySelector('.container');
     let input = document.querySelector('.numInput');
     let submitBtn = document.querySelector('.btnSubmit');
     let cont = "";
     let infoList = document.querySelector('.infoList');
-    
+
+//--------------------click event listener--------------------------//
+
     submitBtn.addEventListener('click', getInfo);
 
+    //-----------------fetch url json info function-----------------------------//
 
      async function fetchCountry(num) {
         const url = 'https://restcountries.eu/rest/v2/all?fields=name';
@@ -42,7 +47,8 @@ doc.ready(function() {
         return cont;
     }
 
-
+//---------------------print info after click on submit button------------------------------//
+    
     async function getInfo() {
         let inputValue = input.value;
         let res;
