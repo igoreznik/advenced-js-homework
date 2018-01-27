@@ -1,0 +1,54 @@
+$color1: #000;
+$color2: pink;
+
+ul {
+  list-style: none;
+  width: 60%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  @for $i from 1 through 9 {
+    li {
+      display: inline-block;
+      width: 33%;
+      height: 230px;
+      @if $i%2 == 0 {
+        &:nth-child(#{$i}) {
+          background-color: $color2;
+          color: $color1
+        }
+      }
+      @else {
+        &:nth-child(#{$i}) {
+          background-color: $color1;
+          color: $color2;
+        }
+      }
+      @if $i == 3 {
+        &:nth-child(#{$i}) {
+          border-radius: 0 60px 0 0;
+        }
+      }
+      @if $i == 7 {
+        &:nth-child(#{$i}) {
+          border-radius: 0 0 0 60px;
+        }
+      }
+
+      &:nth-child(#{$i}) {
+        &:after {
+          content: "#{$i}";
+          font-size: 10em;
+        }
+      }
+      &:first-child {
+        border-radius: 60px 0 0 0;
+      }
+      &:last-child {
+        border-radius: 0  0 60px 0;
+      }
+
+    }
+  }
+}
+
